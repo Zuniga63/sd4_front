@@ -16,10 +16,13 @@
     "@mantine/dates": "^5.9.0",
     "@mantine/hooks": "^5.9.0",
     "@mantine/next": "^5.9.0",
+    "@reduxjs/toolkit": "^1.9.1",
+    "axios": "^1.2.0",
     "dayjs": "^1.11.6",
     "next": "13.0.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-redux": "^8.0.5",
     "remeda": "^1.3.0"
   },
   "devDependencies": {

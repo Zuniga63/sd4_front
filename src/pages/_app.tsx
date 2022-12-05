@@ -2,8 +2,14 @@ import type { AppProps } from 'next/app';
 
 import 'src/styles/globals.css';
 import { emCache } from 'src/utils/emotionCache';
-import { ColorScheme, ColorSchemeProvider, MantineProvider } from '@mantine/core';
+import {
+  ColorScheme,
+  ColorSchemeProvider,
+  MantineProvider,
+} from '@mantine/core';
 import { useLocalStorage, useHotkeys } from '@mantine/hooks';
+import { Provider } from 'react-redux';
+import { store } from 'src/store';
 
 export default function App({ Component, pageProps }: AppProps) {
   // --------------------------------------------------------------------------
@@ -33,7 +39,10 @@ export default function App({ Component, pageProps }: AppProps) {
   useHotkeys([['mod+J', () => toggleColorScheme()]]);
 
   return (
-    <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
+    <ColorSchemeProvider
+      colorScheme={colorScheme}
+      toggleColorScheme={toggleColorScheme}
+    >
       <MantineProvider
         withGlobalStyles
         theme={{
@@ -42,7 +51,9 @@ export default function App({ Component, pageProps }: AppProps) {
           loader: 'bars',
         }}
       >
-        <Component {...pageProps} />
+        <Provider store={store}>
+          <Component {...pageProps} />
+        </Provider>
       </MantineProvider>
     </ColorSchemeProvider>
   );
