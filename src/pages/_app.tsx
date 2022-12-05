@@ -1,7 +1,7 @@
 import type { AppProps } from 'next/app';
 
-import '../styles/globals.css';
-import { emCache } from 'utils/emotionCache';
+import 'src/styles/globals.css';
+import { emCache } from 'src/utils/emotionCache';
 import { ColorScheme, ColorSchemeProvider, MantineProvider } from '@mantine/core';
 import { useLocalStorage, useHotkeys } from '@mantine/hooks';
 
