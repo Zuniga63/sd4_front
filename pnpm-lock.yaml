@@ -9,6 +9,7 @@ specifiers:
   '@mantine/hooks': ^5.9.0
   '@mantine/next': ^5.9.0
   '@reduxjs/toolkit': ^1.9.1
+  '@tabler/icons': ^1.115.0
   '@tailwindcss/line-clamp': ^0.4.2
   '@types/node': 18.11.10
   '@types/react': 18.0.26
@@ -43,6 +44,7 @@ dependencies:
   '@mantine/hooks': 5.9.0_react@18.2.0
   '@mantine/next': 5.9.0_zuvzbl5s5noydr2bwzhqwgjbcq
   '@reduxjs/toolkit': 1.9.1_k4ae6lp43ej6mezo3ztvx6pykq
+  '@tabler/icons': 1.115.0_biqbaboplfbrettd7655fr4n2y
   axios: 1.2.0
   dayjs: 1.11.6
   next: 13.0.6_672uxklweod7ene3nqtsh262ca
@@ -894,6 +896,21 @@ packages:
     resolution: {integrity: sha512-4C7nX/dvpzB7za4Ql9K81xK3HPxCpHMgwTZVyf+9JQ6VUbn9jjZVN7/Nkdz/Ugzs2CSjqnL/UPXroiVBVHUWUw==}
     dependencies:
       tslib: 2.4.1
+    dev: false
+
+  /@tabler/icons/1.115.0_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-Eo1xMuG/+QpUk6QrtiAsmTSjc+A9IIBDauwPT4hVD/XKmnvh0UCCOuK8Zo/jZDIShcJdEcBA4p0wKgt7dbd1GA==}
+    peerDependencies:
+      react: ^16.x || 17.x || 18.x
+      react-dom: ^16.x || 17.x || 18.x
+    peerDependenciesMeta:
+      react:
+        optional: true
+      react-dom:
+        optional: true
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /@tailwindcss/line-clamp/0.4.2_tailwindcss@3.2.4:
