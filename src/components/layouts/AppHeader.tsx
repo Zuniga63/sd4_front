@@ -30,7 +30,7 @@ const AppHeader = () => {
         <div className="lg:hidden">
           <MenuToggle />
         </div>
-        <div className="hidden lg:block">
+        <div className="hidden">
           <Avatar radius="xl" color="blue" size="md" />
         </div>
       </div>
