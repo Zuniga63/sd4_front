@@ -16,6 +16,7 @@ const BrandLogo = () => {
             alt={`${name} - Logo`}
             fill
             className="object-contain"
+            sizes="48px"
           />
         ) : null}
       </figure>

@@ -29,6 +29,10 @@ module.exports = {
         'dark-header': '#161b22',
         'btn-bg': '#21262d',
       },
+      gridTemplateColumns: {
+        'nav-item': 'auto 1fr auto',
+        'auto-fr': 'auto 1fr',
+      },
       screens: {
         '3xl': '1920px',
       },

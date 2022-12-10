@@ -10,7 +10,10 @@ const AppHeader = () => {
   const app = useAppSelector(appSelector);
 
   return (
-    <header className="flex h-16 items-center justify-between bg-gray-300 px-4 dark:bg-dark-header lg:px-8">
+    <header
+      className="sticky top-0 z-fixed flex h-16 items-center justify-between bg-gray-300 px-4 dark:bg-dark-header lg:px-8"
+      id="home-header"
+    >
       <div className="flex items-center lg:gap-x-4">
         <div className="hidden lg:block">
           <MenuToggle />
