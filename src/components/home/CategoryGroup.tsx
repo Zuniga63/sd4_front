@@ -24,8 +24,8 @@ const CategoryGroup = ({ category, imagePriority = false }: Props) => {
   if (!show) return null;
 
   return (
-    <section /* id={createSlug(category.name)} */ data-id={category.id}>
-      <header className="flex items-start gap-3 bg-gray-200 p-4 dark:bg-gray-dark dark:text-gray-100">
+    <section data-id={category.id} className="relative">
+      <header className="sticky top-14 z-50 flex items-start gap-3 bg-gray-200 p-4 dark:bg-gray-dark dark:text-gray-100">
         {image && (
           <figure
             className="relative aspect-square w-20 shrink-0 overflow-hidden rounded-full ring-4 ring-blue-500 dark:ring-amber-400"
