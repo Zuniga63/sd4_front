@@ -25,33 +25,33 @@ const CategoryGroup = ({ category, imagePriority = false }: Props) => {
 
   return (
     <section data-id={category.id} className="relative">
-      <header className="sticky top-14 z-50 flex items-start gap-3 bg-gray-200 p-4 dark:bg-gray-dark dark:text-gray-100">
-        {image && (
-          <figure
-            className="relative aspect-square w-20 shrink-0 overflow-hidden rounded-full ring-4 ring-blue-500 dark:ring-amber-400"
-            /* onClick={() => imageClickHandler(image)} */
-            role="presentation"
-          >
-            <Image
-              src={image.url}
-              alt={category.name}
-              width={image.width}
-              height={image.height}
-              loading="lazy"
-            />
-          </figure>
-        )}
-        <div>
-          <h3 className="font-hand text-3xl font-black">{category.name}</h3>
-          {category.description && (
-            <p className="mt-2 text-sm font-medium tracking-wider">
-              {' '}
-              {category.description}{' '}
-            </p>
+      <header className="sticky top-16 z-50">
+        <div className="flex items-start gap-x-3 bg-gray-200 bg-opacity-20 shadow backdrop-blur dark:bg-gray-dark dark:bg-opacity-50 dark:text-gray-100">
+          {image && (
+            <figure
+              className="relative aspect-square w-24 shrink-0 overflow-hidden rounded-r-full"
+              role="presentation"
+            >
+              <Image
+                src={image.url}
+                alt={category.name}
+                width={image.width}
+                height={image.height}
+                loading="lazy"
+              />
+            </figure>
           )}
+          <div className="py-1">
+            <h3 className="font-hand text-2xl font-black">{category.name}</h3>
+            {category.description && (
+              <p className="line-clamp-3 text-xs tracking-wider">
+                {category.description}
+              </p>
+            )}
+          </div>
         </div>
       </header>
-      <div className="grid bg-gray-800 bg-opacity-20 backdrop-blur md:grid-cols-2 md:gap-4 md:px-4 md:py-2 xl:grid-cols-3">
+      <div className="grid bg-gray-800 bg-opacity-20 md:grid-cols-2 md:gap-4 md:px-4 md:py-2 xl:grid-cols-3">
         {productList.map((item, index) => (
           <ProductCard
             product={item}
