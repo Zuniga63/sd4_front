@@ -44,7 +44,7 @@ const SidebarLinks = () => {
               <div className="flex items-start gap-3 text-dark dark:text-light">
                 {category.image && (
                   <figure
-                    className="relative block aspect-square w-24 shrink-0 overflow-hidden shadow-lg"
+                    className="relative block aspect-square w-20 shrink-0 overflow-hidden rounded-br-full rounded-tr-2xl shadow-lg"
                     role="presentation"
                   >
                     <Image
@@ -52,20 +52,35 @@ const SidebarLinks = () => {
                       alt={category.name}
                       fill
                       sizes="56px"
-                      className="object-cover object-center"
+                      className="object-cover object-left-top"
                     />
                   </figure>
                 )}
-                <div className="flex-grow py-2 pr-4 text-left">
-                  <h3 className="font-hand text-2xl font-black">
+                <div className="flex-grow py-1 pr-4 text-left">
+                  <h3 className="line-clamp-1 font-hand text-2xl font-black">
                     {category.name}
                   </h3>
                   {category.description && (
-                    <p className="mt-2 line-clamp-2 text-left font-sans text-xs font-medium tracking-wider text-gray-600 dark:text-gray-400">
+                    <p className="line-clamp-2 text-left font-sans text-xs font-medium tracking-wider text-gray-600 dark:text-gray-400">
                       {category.description}
                     </p>
                   )}
                 </div>
+
+                {category.image && (
+                  <figure
+                    className="relative block aspect-square w-20 shrink-0 overflow-hidden rounded-tl-full rounded-tr-2xl shadow-lg"
+                    role="presentation"
+                  >
+                    <Image
+                      src={category.image.url}
+                      alt={category.name}
+                      fill
+                      sizes="56px"
+                      className="object-cover object-right-bottom"
+                    />
+                  </figure>
+                )}
               </div>
             </button>
           </li>
