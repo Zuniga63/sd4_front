@@ -1,10 +1,9 @@
-import { IconList } from '@tabler/icons-react';
+import { IconChefHatOff, IconList } from '@tabler/icons-react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import { IProductHome, mountProduct } from 'src/features/home';
 import { useAppDispatch } from 'src/store/hooks';
-// import { useAppDispatch } from 'src/store/hooks';
 import currencyFormat from 'src/utils/currency-format';
 
 interface Props {
@@ -49,9 +48,6 @@ const ProductCard = ({ product, imagePriority }: Props) => {
   }, []);
 
   const clickHandler = () => {
-    // const url = `/products/${product.id}/add-view`;
-    // dispatch(showProduct(product));
-    // axios.put(url);
     dispatch(mountProduct(product));
     setTimeout(() => {
       router.push(
@@ -69,8 +65,8 @@ const ProductCard = ({ product, imagePriority }: Props) => {
       onClick={clickHandler}
       role="presentation"
     >
-      {image && (
-        <figure className="product__fig relative z-0 m-0 h-24 w-24 overflow-hidden rounded-lg shadow-md shadow-neutral-800 dark:shadow dark:shadow-amber-400">
+      <figure className="product__fig relative z-0 m-0 h-24 w-24 overflow-hidden rounded-lg shadow-md shadow-neutral-800 dark:shadow-md dark:shadow-gray-600">
+        {image ? (
           <Image
             src={image.url}
             alt={product.name}
@@ -79,10 +75,14 @@ const ProductCard = ({ product, imagePriority }: Props) => {
             className="h-full w-full border-none bg-transparent object-cover object-center"
             loading="lazy"
           />
-        </figure>
-      )}
+        ) : (
+          <div className="flex h-full w-full items-center justify-center bg-neutral-800">
+            <IconChefHatOff className="h-10 w-10 text-gray-400 dark:text-gray-600" />
+          </div>
+        )}
+      </figure>
 
-      <div className={`${image ? '' : 'col-span-2'} text-dark dark:text-light`}>
+      <div className={`text-dark dark:text-light`}>
         <h4 className="mb-1 border-b-4 border-double border-gray-dark pb-1 font-display text-sm font-normal tracking-wider dark:border-light">
           {product.name}
         </h4>

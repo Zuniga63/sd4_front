@@ -26,7 +26,7 @@ const CategoryGroup = ({ category, imagePriority = false }: Props) => {
   return (
     <section data-id={category.id} className="relative">
       <header className="sticky top-16 z-50">
-        <div className="flex items-start gap-x-3 bg-gray-200 bg-opacity-20 shadow backdrop-blur dark:bg-gray-dark dark:bg-opacity-50 dark:text-gray-100">
+        <div className="flex min-h-24 items-start gap-x-3 bg-gray-200 bg-opacity-20 shadow backdrop-blur dark:bg-gray-dark dark:bg-opacity-50 dark:text-gray-100">
           {image && (
             <figure
               className="relative aspect-square w-24 shrink-0 overflow-hidden rounded-r-full"
