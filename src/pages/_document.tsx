@@ -11,9 +11,14 @@ class MyDocument extends Document {
       <Html lang="es" className="dark">
         <Head>
           <link
-            href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&family=Zen+Dots&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Zen+Dots&display=swap"
             rel="stylesheet"
           />
+
+          <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+            rel="stylesheet"
+          ></link>
           <link
             rel="shortcut icon"
             href={process.env.NEXT_PUBLIC_BRAND_LOGO}
