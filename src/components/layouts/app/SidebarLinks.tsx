@@ -35,16 +35,16 @@ const SidebarLinks = () => {
       </header>
       <ul className="divide-y divide-gray-300 dark:divide-gray-700">
         {categories.map(category => (
-          <li key={category.id}>
+          <li key={category.id} className="overflow-hidden">
             <button
               type="button"
               onClick={() => goToCategory(category.id)}
               className="block w-full"
             >
-              <div className="flex items-center gap-3 p-4 text-dark dark:text-light">
+              <div className="flex items-start gap-3 text-dark dark:text-light">
                 {category.image && (
                   <figure
-                    className="relative block aspect-square w-14 shrink-0 overflow-hidden rounded-full shadow-lg shadow-blue-500 ring-4 ring-blue-400 dark:shadow-yellow-500 dark:ring-yellow-400"
+                    className="relative block aspect-square w-24 shrink-0 overflow-hidden shadow-lg"
                     role="presentation"
                   >
                     <Image
@@ -56,12 +56,12 @@ const SidebarLinks = () => {
                     />
                   </figure>
                 )}
-                <div className="flex-grow">
-                  <h3 className="font-hand text-xl font-black">
+                <div className="flex-grow py-2 pr-4 text-left">
+                  <h3 className="font-hand text-2xl font-black">
                     {category.name}
                   </h3>
                   {category.description && (
-                    <p className="mt-2 line-clamp-2 font-sans text-xs font-medium tracking-wider text-gray-600 dark:text-gray-400">
+                    <p className="mt-2 line-clamp-2 text-left font-sans text-xs font-medium tracking-wider text-gray-600 dark:text-gray-400">
                       {category.description}
                     </p>
                   )}
