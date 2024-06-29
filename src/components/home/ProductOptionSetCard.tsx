@@ -24,7 +24,7 @@ const ProductOptionSetCard = ({
             {optionSet.title}
           </h3>
         </header>
-        <ul className="divide-y divide-slate-400 rounded-b border-x border-b border-dark bg-gradient-to-br from-slate-900 to-slate-400 py-6 px-2">
+        <ul className="divide-y divide-slate-400 rounded-b border-x border-b border-dark bg-gradient-to-br from-slate-900 to-slate-400 px-2 py-6">
           {optionSet.items.map(
             item =>
               item.published &&

@@ -29,7 +29,7 @@ const SidebarLinks = () => {
   return (
     <>
       <header>
-        <h2 className="border-b-4 border-double border-gray-400 py-2 px-4 text-center font-hand text-3xl text-dark dark:text-light">
+        <h2 className="border-b-4 border-double border-gray-400 px-4 py-2 text-center font-hand text-3xl text-dark dark:text-light">
           Menú
         </h2>
       </header>
@@ -61,7 +61,7 @@ const SidebarLinks = () => {
                     {category.name}
                   </h3>
                   {category.description && (
-                    <p className="mt-2 font-sans text-xs font-medium tracking-wider text-gray-600 line-clamp-2 dark:text-gray-400">
+                    <p className="mt-2 line-clamp-2 font-sans text-xs font-medium tracking-wider text-gray-600 dark:text-gray-400">
                       {category.description}
                     </p>
                   )}

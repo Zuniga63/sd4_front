@@ -1,6 +1,10 @@
 import { Drawer } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
-import { IconArrowBadgeLeft, IconArrowBadgeRight, IconX } from '@tabler/icons';
+import {
+  IconArrowBadgeLeft,
+  IconArrowBadgeRight,
+  IconX,
+} from '@tabler/icons-react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
@@ -262,7 +266,7 @@ const ProductDrawer = () => {
         {/* PREV */}
         {!isFirst ? (
           <button
-            className="fixed top-1/2 left-0 rounded-r-lg bg-white bg-opacity-10 px-4 py-8 text-dark text-opacity-70 transition-colors active:bg-white active:bg-opacity-90 lg:hover:bg-opacity-90"
+            className="fixed left-0 top-1/2 rounded-r-lg bg-white bg-opacity-10 px-4 py-8 text-dark text-opacity-70 transition-colors active:bg-white active:bg-opacity-90 lg:hover:bg-opacity-90"
             onClick={prev}
           >
             <IconArrowBadgeLeft size={28} />
@@ -272,7 +276,7 @@ const ProductDrawer = () => {
         {/* NEXT */}
         {!isLast ? (
           <button
-            className="fixed top-1/2 right-0 z-fixed rounded-l-lg bg-white bg-opacity-10 px-4 py-8 text-dark text-opacity-70 transition-colors active:bg-white active:bg-opacity-90 lg:hover:bg-opacity-90"
+            className="fixed right-0 top-1/2 z-fixed rounded-l-lg bg-white bg-opacity-10 px-4 py-8 text-dark text-opacity-70 transition-colors active:bg-white active:bg-opacity-90 lg:hover:bg-opacity-90"
             onClick={next}
           >
             <IconArrowBadgeRight size={28} />

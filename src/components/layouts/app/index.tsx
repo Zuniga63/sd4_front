@@ -6,7 +6,7 @@ import AppHeader from '../AppHeader';
 import AppSidebar from '../AppSidebar';
 import { Affix, Button, Transition } from '@mantine/core';
 import { useWindowScroll } from '@mantine/hooks';
-import { IconArrowUp } from '@tabler/icons';
+import { IconArrowUp } from '@tabler/icons-react';
 import SidebarLinks from './SidebarLinks';
 
 interface Props {

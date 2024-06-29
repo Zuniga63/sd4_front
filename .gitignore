@@ -25,6 +25,15 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+
 # local env files
 .env*.local
 

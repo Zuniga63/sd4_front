@@ -25,7 +25,7 @@ const AppHeader = () => {
           {app.name}
         </h2>
         {app.slogan ? (
-          <p className="text-xs line-clamp-1">{app.slogan}</p>
+          <p className="line-clamp-1 text-xs">{app.slogan}</p>
         ) : null}
       </div>
       <div className="flex items-center gap-x-2 lg:gap-x-4">

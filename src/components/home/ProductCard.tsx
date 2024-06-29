@@ -1,4 +1,4 @@
-import { IconList } from '@tabler/icons';
+import { IconList } from '@tabler/icons-react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
@@ -64,7 +64,7 @@ const ProductCard = ({ product, imagePriority }: Props) => {
 
   return (
     <div
-      className="product relative grid grid-cols-auto-fr gap-3 border-b bg-light pt-8 pb-4 pr-4 pl-4 dark:border-yellow-500 dark:bg-dark-header md:rounded md:border-none md:shadow md:shadow-blue-500 dark:md:shadow-amber-400"
+      className="product relative grid grid-cols-auto-fr gap-3 border-b bg-light pb-4 pl-4 pr-4 pt-8 dark:border-yellow-500 dark:bg-dark-header md:rounded md:border-none md:shadow md:shadow-blue-500 dark:md:shadow-amber-400"
       key={product.id}
       onClick={clickHandler}
       role="presentation"
@@ -87,7 +87,7 @@ const ProductCard = ({ product, imagePriority }: Props) => {
           {product.name}
         </h4>
         {product.description && (
-          <p className="product__description w-full text-sm leading-normal line-clamp-2">
+          <p className="product__description line-clamp-2 w-full text-sm leading-normal">
             {product.description}
           </p>
         )}
@@ -95,7 +95,7 @@ const ProductCard = ({ product, imagePriority }: Props) => {
           <span
             className={
               percentage &&
-              ' inline-block text-xs text-gray-dark text-opacity-50 line-through dark:text-light'
+              'inline-block text-xs text-gray-dark text-opacity-50 line-through dark:text-light'
             }
           >
             {currencyFormat(price)}
@@ -106,7 +106,7 @@ const ProductCard = ({ product, imagePriority }: Props) => {
             <span className="text-sm font-bold">
               {currencyFormat(priceWithDiscount)}
             </span>
-            <span className=" scale-75 text-xs text-green-600">
+            <span className="scale-75 text-xs text-green-600">
               ({percentage})
             </span>
           </p>
@@ -130,7 +130,7 @@ const ProductCard = ({ product, imagePriority }: Props) => {
         </>
       )}
       {product.productIsNew && (
-        <div className="shadow-new-tag absolute top-2 right-2 scale-75 transform rounded border border-red-700 bg-red-600 p-1 text-xs font-black tracking-widest text-light">
+        <div className="shadow-new-tag absolute right-2 top-2 scale-75 transform rounded border border-red-700 bg-red-600 p-1 text-xs font-black tracking-widest text-light">
           New
         </div>
       )}
