@@ -3,7 +3,6 @@ import React from 'react';
 import { appSelector } from 'src/features/app';
 import { useAppSelector } from 'src/store/hooks';
 import BrandLogo from './BrandLogo';
-import DarkButtom from './DarkButton';
 import MenuToggle from './MenuToggle';
 
 const AppHeader = () => {
@@ -29,7 +28,6 @@ const AppHeader = () => {
         ) : null}
       </div>
       <div className="flex items-center gap-x-2 lg:gap-x-4">
-        <DarkButtom />
         <div className="lg:hidden">
           <MenuToggle />
         </div>
